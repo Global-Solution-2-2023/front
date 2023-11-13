@@ -1,0 +1,11 @@
+npm install
+
+npm install json-server
+
+npm install react-hook-form
+
+npm install react-router-dom
+
+npm install yup
+
+npm run backend (para rodar json server) -> já coloquei nos scripts do package.json
