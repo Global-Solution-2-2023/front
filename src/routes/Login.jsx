@@ -1,11 +1,65 @@
-import { } from 'react';
+import { useState, useEffect } from 'react';
+
+import { useForm } from 'react-hook-form';
+
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 function Login(){
+
+    const schema = yup.object({
+        username: yup.string().required("Campo Usuário obrigatório"),
+        password: yup.string().required("Campo Senha obrigatório")
+    }).required();
+
+    const { register, handleSubmit, formState: { errors } }
+        = useForm({
+            resolver: yupResolver(schema)
+        })
+
+    const [usuarios, setUsuarios] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/usuarios')
+            .then((resposta) => {
+                return resposta.json();
+            })
+            .then((resposta) => {
+                setUsuarios(resposta);
+            })
+    }, []);
+
+    const validarFormulario = (data) => {
+        let usuarioValido = false;
+
+        if (data.usuario == '' || data.senha == "") {
+            alert("Por favor, preencha todos os campos.")
+        } else {
+            for (const usuarioDados of usuarios) {
+                if (data.usuario === usuarioDados.usuario && data.senha === usuarioDados.senha) {
+                    let token = Math.random().toString(20).substring(2) +
+                        Math.random().toString(20).substring(2);
+                    sessionStorage.setItem('usuario', data.username);
+                    sessionStorage.setItem('senha', token);
+                    usuarioValido = true;
+                    alert("Seus dados foram registrados com sucesso.")
+                    navigate('/');
+                    break;
+                }
+            }
+        }
+
+        if (!usuarioValido) {
+            alert("Usuário ou senha inválidos! Tente novamente")
+        }
+    };
+
+
     return(
         <>
             <section className='login'>
                 <div className="login-container">
-                    <form>
+                    <form onSubmit={handleSubmit(validarFormulario)}>
                         <fieldset>
 
                             <div className='login-header'>
@@ -16,14 +70,14 @@ function Login(){
 
                                 <div className="input-box">
                                     <label htmlFor="usuario">Usuário</label>
-                                    <input type="text" placeholder='Usuário'/>
-                                    <span className="red-span"></span>
+                                    <input type="text" {...register('username')} placeholder='Usuário'/>
+                                    <span className="red-span">{errors.username?.message}</span>
                                 </div>
 
                                 <div className="input-box">
                                     <label htmlFor="senha">Senha</label>
-                                    <input type="password" placeholder='Senha'/>
-                                    <span className="red-span"></span>
+                                    <input type="password" {...register('password')}  placeholder='Senha'/>
+                                    <span className="red-span">{errors.password?.message}</span>
                                 </div>
 
                                 <div className="button-box">
