@@ -63,35 +63,32 @@ function Login(){
             <section className='login'>
                 <div className="login-container">
                     <form onSubmit={handleSubmit(validarFormulario)}>
-                        <fieldset>
 
-                            <div className='login-header'>
-                                <h1>Login</h1>
+                        <div className='login-header'>
+                            <h2>Login</h2>
+                        </div>
+
+                        <div className='input-group'>
+
+                            <div className="input-group-box">
+                                <label htmlFor="usuario">Usuário</label>
+                                <input type="text" {...register('usuario')} placeholder='Usuário'/>
+                                <span className="red-span">{errors.usuario?.message}</span>
                             </div>
 
-                            <div className='login-input-group'>
-
-                                <div className="input-box">
-                                    <label htmlFor="usuario">Usuário</label>
-                                    <input type="text" {...register('usuario')} placeholder='Usuário'/>
-                                    <span className="red-span">{errors.usuario?.message}</span>
-                                </div>
-
-                                <div className="input-box">
-                                    <label htmlFor="senha">Senha</label>
-                                    <input type="password" {...register('senha')}  placeholder='Senha'/>
-                                    <span className="red-span">{errors.senha?.message}</span>
-                                </div>
-
-                                <div className="button-box">
-                                    <button type='submit'>Login</button>
-                                </div>
-
+                            <div className="input-group-box">
+                                <label htmlFor="senha">Senha</label>
+                                <input type="password" {...register('senha')}  placeholder='Senha'/>
+                                <span className="red-span">{errors.senha?.message}</span>
                             </div>
 
-                        </fieldset>
+                            <div className="input-group-button">
+                                <button type='submit' className='login-btn'>Login</button>
+                            </div>
+
+                        </div>
+                        
                     </form>
-
 
                 </div>
             </section>

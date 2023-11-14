@@ -5,6 +5,12 @@ import Error from './routes/Error.jsx'
 import Home from './routes/Home.jsx'
 import App from './App.jsx'
 
+import './assets/styles/main.scss'
+import './assets/styles/components/header.scss'
+import './assets/styles/components/footer.scss'
+import './assets/styles/routes/login.scss'
+import './assets/styles/routes/home.scss'
+
 const router = createBrowserRouter([
 
   {

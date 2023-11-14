@@ -1,0 +1,97 @@
+@use '../variables.scss';
+
+.login {
+    width: 100%;
+    height: calc(100vh - 90px);
+    padding: 3% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    &-container {
+        width: 600px;
+        height: 520px;
+        padding: 45px;
+        min-height: 500px;
+        border-radius: 24px;
+        background-color: variables.$bg-color;
+        box-shadow: 0 10px 10px 0 #b5b3b3;
+
+        form {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+    
+            .login-header {
+                
+                h2 {
+                    font-size: 3rem;
+
+                }
+
+            }
+
+            .input-group {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                gap: 40px;
+
+                &-box {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 10px;
+
+                    label {
+                        font-size: 1.6rem;
+
+                    }
+
+                    input {
+                        font-size: 1.1rem;
+                        padding: 10px 10px;
+                        
+                    }
+
+                    .red-span {
+                        color: red;
+                    }
+
+                }
+
+                &-button {
+                    width: 100%;
+
+                    .login-btn {
+                        width: 100%;
+                        background-color: cyan;
+                        color: rgb(25, 69, 179);
+                        padding: 12px 30px;
+                        border: 0;
+                        border-radius: 16px;
+                        cursor: pointer;
+                        transition: .7s;
+                        letter-spacing: 1px;
+                        font-size: 1.3rem;
+
+                        &:hover {
+                            background-color: rgb(25, 69, 179);
+                            color: cyan;
+
+                        }
+                    }
+                }
+    
+            }
+        }
+        
+    }
+
+}
+

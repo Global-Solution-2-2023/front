@@ -12,9 +12,23 @@ function Nav(){
 
     return(
         <>
-            <header>
-                <h1>HEADER</h1>
-                <button onClick={handleLogout}>Logout</button>
+            <header className='header'>
+
+                <div className="header-brand">
+                    <div className='header-brand-img'>
+                        <img src="" alt="" />
+                    </div>
+                    <h2>HEADER</h2>
+                </div>
+
+                <nav className='header-menu'>
+                    <ul>
+                        <li>Usuário:</li>
+                        <li>Email:</li>
+                        <li><button onClick={handleLogout} className='logout-btn'>Logout</button></li>
+                    </ul>
+                </nav>
+
             </header>
         </>
     )
