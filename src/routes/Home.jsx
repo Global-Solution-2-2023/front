@@ -6,7 +6,6 @@ function Home(){
     const getUser = sessionStorage.getItem('usuario');
     const getPassword = sessionStorage.getItem('senha');
 
-
     return(
         <>
             {! (getUser && getPassword) ? (
@@ -16,7 +15,6 @@ function Home(){
                         <main>
                             <section>
                                 <h1>HOME</h1>
-
                             </section>
                         </main>
                     </>

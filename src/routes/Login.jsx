@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import { useForm } from 'react-hook-form';
 
@@ -7,9 +8,11 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 function Login(){
 
+    const navigate = useNavigate();
+
     const schema = yup.object({
-        username: yup.string().required("Campo Usuário obrigatório"),
-        password: yup.string().required("Campo Senha obrigatório")
+        usuario: yup.string().required("Campo Usuário obrigatório"),
+        senha: yup.string().required("Campo Senha obrigatório")
     }).required();
 
     const { register, handleSubmit, formState: { errors } }
@@ -50,7 +53,7 @@ function Login(){
         }
 
         if (!usuarioValido) {
-            alert("Usuário ou senha inválidos! Tente novamente")
+            alert("Usuário ou senha inválidos! Tente novamente.")
         }
     };
 
@@ -70,14 +73,14 @@ function Login(){
 
                                 <div className="input-box">
                                     <label htmlFor="usuario">Usuário</label>
-                                    <input type="text" {...register('username')} placeholder='Usuário'/>
-                                    <span className="red-span">{errors.username?.message}</span>
+                                    <input type="text" {...register('usuario')} placeholder='Usuário'/>
+                                    <span className="red-span">{errors.usuario?.message}</span>
                                 </div>
 
                                 <div className="input-box">
                                     <label htmlFor="senha">Senha</label>
-                                    <input type="password" {...register('password')}  placeholder='Senha'/>
-                                    <span className="red-span">{errors.password?.message}</span>
+                                    <input type="password" {...register('senha')}  placeholder='Senha'/>
+                                    <span className="red-span">{errors.senha?.message}</span>
                                 </div>
 
                                 <div className="button-box">

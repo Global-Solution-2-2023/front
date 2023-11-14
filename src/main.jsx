@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Error from './routes/Error.jsx'
+import Home from './routes/Home.jsx'
 import App from './App.jsx'
 
 const router = createBrowserRouter([
