@@ -16,7 +16,7 @@
         min-height: 500px;
         border-radius: 24px;
         background-color: variables.$bg-color;
-        box-shadow: 0 10px 10px 0 #b5b3b3;
+        box-shadow: 0 3px 3px 3px #a357dd61;
 
         form {
             height: 100%;
@@ -70,19 +70,22 @@
 
                     .login-btn {
                         width: 100%;
-                        background-color: cyan;
-                        color: rgb(25, 69, 179);
+                        background-color: variables.$secondary-color;
+                        color: white;
                         padding: 12px 30px;
-                        border: 0;
+                        border: 2px solid variables.$secondary-color;
                         border-radius: 16px;
                         cursor: pointer;
                         transition: .7s;
                         letter-spacing: 1px;
                         font-size: 1.3rem;
-
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        
                         &:hover {
-                            background-color: rgb(25, 69, 179);
-                            color: cyan;
+                            background-color: variables.$body-bg-color;
+                            border: 2px solid variables.$body-bg-color;
 
                         }
                     }
