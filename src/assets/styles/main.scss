@@ -1,11 +1,12 @@
-@use './variables.scss';
+@use './var.scss';
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var.$font1;
 }
 
 body {
-    background-color: variables.$body-bg-color;
+    background-color: var.$body-bg-color;
 }

@@ -46,7 +46,7 @@ function Login(){
                     sessionStorage.setItem('senha', token);
                     usuarioValido = true;
                     alert("Seus dados foram registrados com sucesso.")
-                    navigate('/');
+                    window.location.reload()
                     break;
                 }
             }
@@ -71,14 +71,18 @@ function Login(){
                         <div className='input-group'>
 
                             <div className="input-group-box">
-                                <label htmlFor="usuario">Usuário</label>
-                                <input type="text" {...register('usuario')} placeholder='Usuário'/>
+                                <div className="label-input">
+                                    <label htmlFor="usuario">Usuário</label>
+                                    <input type="text" {...register('usuario')} placeholder='Usuário'/>
+                                </div>
                                 <span className="red-span">{errors.usuario?.message}</span>
                             </div>
 
                             <div className="input-group-box">
-                                <label htmlFor="senha">Senha</label>
-                                <input type="password" {...register('senha')}  placeholder='Senha'/>
+                                <div className="label-input">
+                                    <label htmlFor="senha">Senha&nbsp;</label>
+                                    <input type="password" {...register('senha')}  placeholder='Senha'/>
+                                </div>
                                 <span className="red-span">{errors.senha?.message}</span>
                             </div>
 

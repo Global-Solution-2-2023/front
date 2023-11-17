@@ -1,12 +1,12 @@
-@use '../variables.scss';
+@use '../var.scss';
 
 main {
     min-height: calc(100vh - 80px);
-    padding: 5% 8%;
+    padding: 4% 8%;
 
 
     .container {
-        background-color: variables.$bg-color;
+        background-color: var.$bg-color;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
         box-sizing: border-box;
@@ -44,18 +44,19 @@ main {
                 
                 h1 {
                     width: 40%;
-                    font-size: 3rem;
+                    font-size: 4rem;
                 }
                 
                 p {
                     width: 60%;
-                    font-size: 1.3rem;
+                    font-size: 1.7rem;
                     
                 }
                 
                 /*Tela <= 1433*/
                 @media only screen and (max-width: 1433px){
                     flex-direction: column;
+                    padding: 5% 15%;
 
                     h1 {
                         width: 100%;
@@ -76,9 +77,9 @@ main {
         .aside-container {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            padding: 5%;
+            padding: 4%;
             border: 2px solid green;
             
             
@@ -86,21 +87,21 @@ main {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                padding: 6% 3%;
+                padding: 5% 3%;
                 
                 h3 {
-                    font-size: 2.2rem;
+                    font-size: 3rem;
                 }
                 
                 p {
-                    font-size: 1.3rem;
+                    font-size: 1.6rem;
                     line-height: 2rem;
                 }
             }     
 
             .border {
-                border-top: 2px solid variables.$body-bg-color;
-                border-bottom: 2px solid variables.$body-bg-color;
+                border-top: 2px solid var.$body-bg-color;
+                border-bottom: 2px solid var.$body-bg-color;
 
             }
         }
@@ -109,42 +110,88 @@ main {
     }
 
     .cards-section {
-        background-color: rgb(160, 157, 157);
-        border: 2px solid red;
-
-
+        background-color: var.$bg-color;
+        padding: 4%;
+        
         h2 {
-
+            font-size: 4.2rem;
+            margin-bottom: 40px;
+            text-align: center;
         }
-
+        
         .cards-container {
-
-             
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
+            
             .card-container {
+                background-color: var.$body-bg-color;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 40px;
+                gap: 20px;
+                border-radius: 40px;
+                transition: .5s;
+                cursor: pointer;
+                box-shadow: 0px 5px 5px 0px #55457e;
 
+                h3 {
+                    font-size: 4rem;
+                    color: white;
+                }
+
+                .heart-container {
+                    display: flex;
+                    gap: 20px;
+                    
+                    .heart-img-container {
+                        width: 54px;
+                        
+                        .heart {
+                            position: relative;
+                            width: 100%;
+                        }
+                    }
+                }
 
                 .card-img {
-
-
+                    width: 100%;
+                    border-radius: 20px;
+                    
                     img {
-
+                        border-radius: 20px;
+                        width: 100%;
                     }
                 }
 
                 .card-text {
-
-
-                    h3 {
-
-                    }
+                    text-align: center;
+                    color: white;
 
                     h4 {
-
+                        font-size: 3rem;
+                        
                     }
-
+                    
                     p {
+                        font-size: 1.5rem;
 
                     }
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                &:hover .heart {
+                    animation: heart 0.8s infinite linear;
+                }
+
+                @keyframes heart{
+                    from{scale: 1;}
+                    to{scale: 1.2;}
                 }
             }
         }

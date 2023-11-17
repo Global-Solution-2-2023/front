@@ -1,6 +1,10 @@
 import { } from 'react';
 import Login from './Login.jsx';
-import HeroImg from '../assets/img/provisoria.jpg'
+import HeroImg from '../assets/img/hero.png';
+import Card1 from '../assets/img/card1.jpeg';
+import Card2 from '../assets/img/card2.jpeg';
+import HeartImg from '../assets/img/heart.png';
+
 
 function Home(){
     
@@ -22,7 +26,7 @@ function Home(){
                                         <img src={HeroImg} alt="" />
                                     </div>
                                     <div className="hero-text">
-                                        <h1>Título da solução</h1>
+                                        <h1>Projeto X</h1>
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, omnis tenetur! Officiis dolores illum nemo enim ut voluptatem animi blanditiis.</p>
                                     </div>
                                 </section>
@@ -53,33 +57,60 @@ function Home(){
                                 <div className="cards-container">
 
                                     <div className="card-container">
+
+                                        <div className="heart-container">
+                                            <div className='heart-img-container'>
+                                                <img src={HeartImg} alt="" className='heart'/>
+                                            </div>
+                                        </div>
+
                                         <div className="card-img">
-                                            <img src="" alt="" />
+                                            <img src={Card1} alt="" />
                                         </div>
                                         <div className="card-text">
-                                            <h3>01</h3>
                                             <h4>Lorem ipsum dolor</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, ducimus?</p>
                                         </div>
                                     </div>
 
                                     <div className="card-container">
+                                        
+                                        <div className="heart-container">
+                                            <div className='heart-img-container'>
+                                                <img src={HeartImg} alt="" className='heart'/>
+                                            </div>
+                                            <div className='heart-img-container'>
+                                                <img src={HeartImg} alt="" className='heart'/>
+                                            </div>
+                                        </div>
+
                                         <div className="card-img">
-                                            <img src="" alt="" />
+                                            <img src={Card2} alt="" />
                                         </div>
                                         <div className="card-text">
-                                            <h3>02</h3>
                                             <h4>Lorem ipsum dolor</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, ducimus?</p>
                                         </div>
                                     </div>
 
                                     <div className="card-container">
+
+                                        <div className="heart-container">
+                                            <div className='heart-img-container'>
+                                                <img src={HeartImg} alt="" className='heart'/>
+                                            </div>
+                                            <div className='heart-img-container'>
+                                                <img src={HeartImg} alt="" className='heart'/>
+                                            </div>
+                                            <div className='heart-img-container'>
+                                                <img src={HeartImg} alt="" className='heart'/>
+                                            </div>
+                                        </div>
+
                                         <div className="card-img">
-                                            <img src="" alt="" />
+                                            <img src={Card2} alt="" />
                                         </div>
                                         <div className="card-text">
-                                            <h3>03</h3>
                                             <h4>Lorem ipsum dolor</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, ducimus?</p>
                                         </div>
