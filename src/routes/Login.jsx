@@ -39,7 +39,7 @@ function Login(){
                 if (data.usuario === usuarioDados.usuario && data.senha === usuarioDados.senha) {
                     let token = Math.random().toString(20).substring(2) +
                         Math.random().toString(20).substring(2);
-                    sessionStorage.setItem('usuario', data.username);
+                    sessionStorage.setItem('usuario', data.usuario);
                     sessionStorage.setItem('senha', token);
                     usuarioValido = true;
                     alert("Seus dados foram registrados com sucesso.")

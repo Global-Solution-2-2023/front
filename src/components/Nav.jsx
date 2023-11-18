@@ -1,4 +1,6 @@
-import { } from 'react';
+import { useEffect, useState } from 'react';
+
+import LogoImg from '../assets/img/logo.png'
 
 function Nav(){
 
@@ -10,7 +12,32 @@ function Nav(){
         sessionStorage.removeItem('senha');
         alert("Saindo da sessão.");
         window.location.reload()
-      }
+    }
+
+    const [usuarios, setUsuarios] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/usuarios')
+            .then((resposta) => {
+                return resposta.json();
+            })
+            .then((resposta) => {
+                setUsuarios(resposta);
+            })
+    }, []);
+
+    let usuarioAtual = null;
+
+    for (const usuarioDados of usuarios) {
+        console.log("getUser:", getUser);
+        console.log("usuarioDados.usuario:", usuarioDados.usuario);
+
+        if (getUser === usuarioDados.usuario) {
+            usuarioAtual = usuarioDados;
+            break;
+        }
+    }
+
 
     return(
         <>
@@ -18,17 +45,17 @@ function Nav(){
 
                 <div className="header-brand">
                     <div className='header-brand-img'>
-                        <img src="" alt="" />
+                        <img src={LogoImg} alt="Logo" />
                     </div>
                     <h2>PROJETO X</h2>
                 </div>
 
                 <nav className='header-menu'>
                     <ul>
-                    {getUser && getPassword ? (
+                    {getUser && getPassword && usuarioAtual ? (
                         <>
-                            <li>Usuário:</li>
-                            <li>Email:</li>
+                            <li className='user-info'>Usuário: {usuarioAtual.usuario}</li>
+                            <li className='user-info'>Email: {usuarioAtual.email}</li>
                             <li><button onClick={handleLogout} className='logout-btn'>Logout</button></li>
                         </>
                         
