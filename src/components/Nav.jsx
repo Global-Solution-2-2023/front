@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 
+import { IoMenu as MenuToggleIcon } from "react-icons/io5";
+import { MdOutlineEmail as EmailIcon } from "react-icons/md";
+import { FaRegUser as UserIcon } from "react-icons/fa";
+import { CiLogout as LogoutIcon } from "react-icons/ci";
+
 import LogoImg from '../assets/img/logo.png'
 
 function Nav(){
@@ -12,6 +17,10 @@ function Nav(){
         sessionStorage.removeItem('senha');
         alert("Saindo da sessão.");
         window.location.reload()
+    }
+
+    const menuToggle = () => {
+        document.querySelector('.menu-info').classList.toggle('active')
     }
 
     const [usuarios, setUsuarios] = useState([]);
@@ -38,7 +47,6 @@ function Nav(){
         }
     }
 
-
     return(
         <>
             <header className='header'>
@@ -54,8 +62,23 @@ function Nav(){
                     <ul>
                     {getUser && getPassword && usuarioAtual ? (
                         <>
-                            <li className='user-info'>Usuário: {usuarioAtual.usuario}</li>
-                            <li className='user-info'>Email: {usuarioAtual.email}</li>
+                            <li className='user-info'><UserIcon /> {usuarioAtual.usuario}</li>
+                            <li className='user-info'><EmailIcon /> {usuarioAtual.email}</li>
+                            <li>
+                                <div className='menu-container'>
+                                    <div onClick={menuToggle} className='menu-toggle'>
+                                        <MenuToggleIcon className="menu-icon"/>
+                                    </div>
+                                    <div className='menu-info'>
+                                        <h3>Informações do Usuário</h3>
+                                        <ul className='menu-user-info'>
+                                            <li className='menu-user-info-li'><UserIcon id='icon' /> <p>{usuarioAtual.usuario}</p></li>
+                                            <li className='menu-user-info-li no-border'><EmailIcon id='icon' /> <p>{usuarioAtual.email}</p></li>
+                                            <li onClick={handleLogout} className='menu-logout'><LogoutIcon id='icon' /> <p>Logout</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
                             <li><button onClick={handleLogout} className='logout-btn'>Logout</button></li>
                         </>
                         
