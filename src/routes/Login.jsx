@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
 
 import { useForm } from 'react-hook-form';
 
@@ -7,8 +6,6 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 function Login(){
-
-    const navigate = useNavigate();
 
     const schema = yup.object({
         usuario: yup.string().required("Campo Usuário obrigatório"),
@@ -62,7 +59,7 @@ function Login(){
         <>
             <section className='login'>
                 <div className="login-container">
-                    <form onSubmit={handleSubmit(validarFormulario)}>
+                    <form onSubmit={handleSubmit(validarFormulario)} className='form-login'>
 
                         <div className='login-header'>
                             <h2>Login</h2>
