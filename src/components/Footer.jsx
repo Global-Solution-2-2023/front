@@ -3,8 +3,10 @@ import { } from 'react';
 function Footer(){
     return(
         <>
-            <footer>
-                <h1>Footer</h1>
+            <footer className='footer'>
+                <div className="footer-title">
+                    <h2>&copy; 2023 Projeto X - Todos os direitos reservados.</h2>
+                </div>
             </footer>
         </>
     )
