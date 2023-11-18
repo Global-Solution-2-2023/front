@@ -10,12 +10,14 @@ import './assets/styles/components/header.scss'
 import './assets/styles/components/footer.scss'
 import './assets/styles/routes/login.scss'
 import './assets/styles/routes/home.scss'
+import './assets/styles/routes/error.scss'
+
 
 const router = createBrowserRouter([
 
   {
     path: '/', element: <App />,
-    errorELement: <Error />,
+    errorElement: <Error />,
 
     children: [
       {path: '/', element: <Home />}

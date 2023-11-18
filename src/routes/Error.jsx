@@ -3,8 +3,8 @@ import { } from 'react';
 function Error(){
     return(
         <>
-            <section>
-                <h1>404-Página não encontrada.</h1>
+            <section className='section-error'>
+                <h2>404-Página não encontrada.</h2>
             </section>
         </>
     )
