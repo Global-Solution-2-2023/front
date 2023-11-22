@@ -26,7 +26,7 @@ function Home(){
                                         <img src={HeroImg} alt="" />
                                     </div>
                                     <div className="hero-text">
-                                        <h1>Projeto X</h1>
+                                        <h1>Pixel Health</h1>
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, omnis tenetur! Officiis dolores illum nemo enim ut voluptatem animi blanditiis.</p>
                                     </div>
                                 </section>

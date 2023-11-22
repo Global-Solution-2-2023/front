@@ -55,7 +55,7 @@ function Nav(){
                     <div className='header-brand-img'>
                         <img src={LogoImg} alt="Logo" />
                     </div>
-                    <h2>PROJETO X</h2>
+                    <h2>Pixel Health</h2>
                 </div>
 
                 <nav className='header-menu'>
