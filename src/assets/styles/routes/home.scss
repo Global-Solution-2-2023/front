@@ -123,6 +123,7 @@ main {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 50px;
+            padding: 4%;
             
             .card-container {
                 background-color: var.$body-bg-color;
@@ -130,7 +131,7 @@ main {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                padding: 60px 40px;
+                padding: 40px;
                 gap: 20px;
                 border-radius: 40px;
                 transition: .5s;
@@ -159,6 +160,7 @@ main {
                 .card-img {
                     width: 100%;
                     border-radius: 20px;
+                    display: block;
                     
                     img {
                         border-radius: 20px;
@@ -193,6 +195,31 @@ main {
                     from{scale: 1;}
                     to{scale: 1.2;}
                 }
+            }
+
+            @media (max-width: 576px) {
+                padding: 0;
+
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+                
+            }
+            
+            @media (max-width: 768px) {
+                padding: 3%;
+                
+
+                .card-img {
+                    display: none;
+                    img {
+                        display: none;
+
+                    }
+                }
+            }
+
+            @media (min-width: 850px) and (max-width: 1229px) {
+                padding: 80px;
+
             }
         }
     }
