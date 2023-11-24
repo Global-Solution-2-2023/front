@@ -3,6 +3,7 @@
 main {
     min-height: calc(100vh - 80px);
     padding: 4% 8%;
+    color: var.$primary-color;
 
     .container {
         display: grid;
@@ -17,10 +18,14 @@ main {
         .hero-container {
             display: flex;
             flex-direction: column;
+            background-color: #252034;
+            color: var.$bg-color;
+            border-top-left-radius: 20px;
             
             .hero-img {
                 max-width: 100%;
                 height: 60%;
+                border-top-left-radius: 20px;
 
                 img {
                     width: 100%;
@@ -34,28 +39,30 @@ main {
                 height: 100%;
                 width: 100%;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
-                justify-content: center;
-                padding: 5%;
-                gap: 20px;
+                justify-content: space-around;
+                padding: 7%;
+                gap: 16px;
                 text-align: center;
                 border-right: 2px solid var.$primary-color;
+                color: white;
 
                 h1 {
-                    width: 40%;
-                    font-size: 5rem;
+                    font-size: 6.5rem;
+                    width: 80%;
                 }
                 
                 p {
-                    width: 60%;
-                    font-size: 1.7rem;  
+                    width: 80%;
+                    font-size: 2rem;  
                 }
                 
             }  
 
             /*Tela <= 1428*/
             @media only screen and (max-width: 1428px){
+                border-top-right-radius: 20px;
 
                 .hero-img {
 
@@ -115,16 +122,32 @@ main {
 }
 
     .cards-section {
-        background-color: var.$bg-color;
+        background-color: #3c2e4d;
         padding: 4%;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        
-        h2 {
-            font-size: 4.2rem;
-            margin-bottom: 20px;
-            text-align: center;
+
+        .cards-title {
+            display: flex;
+            justify-content: center;
+            gap: 3%;
+
+            .title-line {
+                border: 1px solid white;
+                height: 2px;
+                margin: auto 0;
+                width: 35%;
+
+            }
+
+            h2 {
+                font-size: 4.2rem;
+                margin: 20px 0;
+                text-align: center;
+                color: white;
+            }
         }
+        
         
         .cards-container {
             display: grid;
@@ -133,7 +156,7 @@ main {
             padding: 4% 6%;
             
             .card-container {
-                background-color: var.$body-bg-color;
+                background-color: var.$bg-color;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -144,11 +167,6 @@ main {
                 transition: .5s;
                 cursor: pointer;
                 box-shadow: 0px 5px 5px 0px #55457e;
-
-                h3 {
-                    font-size: 4rem;
-                    color: white;
-                }
 
                 .heart-container {
                     display: flex;
@@ -170,6 +188,7 @@ main {
                     display: block;
                     
                     img {
+                        border: 5px solid var.$primary-color;
                         border-radius: 20px;
                         width: 100%;
                     }
@@ -177,7 +196,7 @@ main {
 
                 .card-text {
                     text-align: center;
-                    color: white;
+                    color: var.$primary-color;
 
                     h4 {
                         font-size: 3rem;
