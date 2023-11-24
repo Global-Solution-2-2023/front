@@ -3,6 +3,7 @@ import Login from './Login.jsx';
 import HeroImg from '../assets/img/hero.png';
 import Card1 from '../assets/img/card1.jpeg';
 import Card2 from '../assets/img/card2.jpeg';
+import Card3 from '../assets/img/card3.jpg';
 import HeartImg from '../assets/img/heart.png';
 
 
@@ -23,7 +24,7 @@ function Home(){
 
                                 <section className='hero-container'>
                                     <div className='hero-img'>
-                                        <img src={HeroImg} alt="" />
+                                        <img src={HeroImg} alt="Imagem ilustrtaiva do menu do aplicativo" />
                                     </div>
                                     <div className="hero-text">
                                         <h1>Pixel Health</h1>
@@ -66,16 +67,16 @@ function Home(){
 
                                         <div className="heart-container">
                                             <div className='heart-img-container'>
-                                                <img src={HeartImg} alt="" className='heart'/>
+                                                <img src={HeartImg} alt="Imagem de um coração em pixel art" className='heart'/>
                                             </div>
                                         </div>
 
                                         <div className="card-img">
-                                            <img src={Card1} alt="" />
+                                            <img src={Card1} alt="Imagem ilustrativa em pixel art de jogadores em volta de um coração" />
                                         </div>
                                         <div className="card-text">
-                                            <h4>Lorem ipsum dolor</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, ducimus?</p>
+                                            <h4>Experiência Divertida e Motivadora</h4>
+                                            <p>O Pixel Health transforma a busca por hábitos saudáveis em uma experiência de jogo envolvente, superando alternativas passivas, como assistir vídeos sobre saúde.</p>
                                         </div>
                                     </div>
 
@@ -83,19 +84,19 @@ function Home(){
                                         
                                         <div className="heart-container">
                                             <div className='heart-img-container'>
-                                                <img src={HeartImg} alt="" className='heart'/>
+                                                <img src={HeartImg} alt="Imagem de um coração em pixel art" className='heart'/>
                                             </div>
                                             <div className='heart-img-container'>
-                                                <img src={HeartImg} alt="" className='heart'/>
+                                                <img src={HeartImg} alt="Imagem de um coração em pixel art" className='heart'/>
                                             </div>
                                         </div>
 
                                         <div className="card-img">
-                                            <img src={Card2} alt="" />
+                                            <img src={Card3} alt="Imagem ilustrativa em pixel art de uma loja" />
                                         </div>
                                         <div className="card-text">
-                                            <h4>Lorem ipsum dolor</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, ducimus?</p>
+                                            <h4>Recompensas e Personalização</h4>
+                                            <p>Além dos benefícios à saúde, oferecemos recompensas tangíveis no jogo, como comprar roupas e personalizar o personagem com conquistas alcançadas.</p>
                                         </div>
                                     </div>
 
@@ -103,23 +104,24 @@ function Home(){
 
                                         <div className="heart-container">
                                             <div className='heart-img-container'>
-                                                <img src={HeartImg} alt="" className='heart'/>
+                                                <img src={HeartImg} alt="Imagem de um coração em pixel art" className='heart'/>
                                             </div>
                                             <div className='heart-img-container'>
-                                                <img src={HeartImg} alt="" className='heart'/>
+                                                <img src={HeartImg} alt="Imagem de um coração em pixel art" className='heart'/>
                                             </div>
                                             <div className='heart-img-container'>
-                                                <img src={HeartImg} alt="" className='heart'/>
+                                                <img src={HeartImg} alt="Imagem de um coração em pixel art" className='heart'/>
                                             </div>
                                         </div>
-
+                                        
                                         <div className="card-img">
-                                            <img src={Card2} alt="" />
+                                            <img src={Card2} alt="Imagem ilustrativa em pixel art de um cérebro (IoT) com uma poção e um kit médico" />
                                         </div>
                                         <div className="card-text">
-                                            <h4>Lorem ipsum dolor</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, ducimus?</p>
+                                            <h4>Integração Wearable IoT</h4>
+                                            <p>Além da diversão no jogo, a integração com dispositivos wearable IoT permite melhorias reais na saúde. Competir no ranking acrescenta motivação adicional.</p>
                                         </div>
+
                                     </div>
 
                                 </div>

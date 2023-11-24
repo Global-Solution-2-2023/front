@@ -53,7 +53,7 @@ function Nav(){
 
                 <div className="header-brand">
                     <div className='header-brand-img'>
-                        <img src={LogoImg} alt="Logo" />
+                        <img src={LogoImg} alt="Logo do Pixel Health" />
                     </div>
                     <h2>Pixel Health</h2>
                 </div>
