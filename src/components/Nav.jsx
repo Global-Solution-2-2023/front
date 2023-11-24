@@ -82,9 +82,7 @@ function Nav(){
                             <li><button onClick={handleLogout} className='logout-btn'>Logout</button></li>
                         </>
                         
-                        ) : (
-                            <li></li>
-                        )}
+                        ) : null}
                         </ul>
                     </nav>
                     

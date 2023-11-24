@@ -167,7 +167,36 @@
                 }
             }
 
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 576px) {
+
+                .user-info {
+                    display: none;
+                }
+
+                .menu-container {
+                    display: block;
+
+                    .menu-toggle {
+                        display: block;
+                    }
+                }
+                
+                .menu-info {
+                    right: 32px;
+                    margin-right: 0;
+
+                    .menu-logout {
+                        display: flex !important;
+                    }
+
+                }
+
+                .logout-btn {
+                    display: none;
+                }
+            }
+
+            @media screen and (min-width: 577px) and (max-width: 767px) {
 
                 .user-info {
                     display: none;
@@ -212,6 +241,28 @@
                     }
                 }
 
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 0% 5%;
+
+        &-brand {
+
+            &-img {
+                height: 60px;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        &-menu {
+
+            ul {
+                gap: 0;
             }
         }
     }
